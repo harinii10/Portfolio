@@ -18,12 +18,15 @@ export const Skills: React.FC = () => {
     switch (title) {
       case 'Programming Languages':
         return <Terminal className="h-5 w-5 text-[#9B5CFF]" />;
+      case 'Frontend':
       case 'Frontend Development':
         return <Globe className="h-5 w-5 text-[#5B8CFF]" />;
+      case 'Backend':
       case 'Backend & APIs':
         return <Server className="h-5 w-5 text-[#22d3ee]" />;
       case 'Databases':
         return <Database className="h-5 w-5 text-emerald-500" />;
+      case 'Tools':
       case 'Tools & Workflow':
         return <Wrench className="h-5 w-5 text-amber-500" />;
       default:
@@ -33,10 +36,10 @@ export const Skills: React.FC = () => {
 
   const filteredCategories = SKILL_CATEGORIES.filter((cat) => {
     if (activeTab === 'languages') return cat.title === 'Programming Languages';
-    if (activeTab === 'frontend') return cat.title === 'Frontend Development';
-    if (activeTab === 'backend') return cat.title === 'Backend & APIs';
+    if (activeTab === 'frontend') return cat.title.startsWith('Frontend');
+    if (activeTab === 'backend') return cat.title.startsWith('Backend');
     if (activeTab === 'databases') return cat.title === 'Databases';
-    if (activeTab === 'tools') return cat.title === 'Tools & Workflow';
+    if (activeTab === 'tools') return cat.title.startsWith('Tools');
     return true;
   });
 

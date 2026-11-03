@@ -7,16 +7,14 @@ import {
   CheckCircle2,
   Calendar,
   Building,
-  GraduationCap,
   Bot,
   Gamepad2,
   SmilePlus,
-  Clock,
   ShieldCheck,
+  Users2,
 } from 'lucide-react';
 import {
   HACKATHON_EXPERIENCE,
-  TRAINING_DATA,
   EXTRACURRICULAR_DATA,
 } from '../data/portfolioData';
 
@@ -33,14 +31,14 @@ export const Experience: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#9B5CFF]/15 text-[#9B5CFF] border border-[#9B5CFF]/20 mb-3">
             <Sparkles className="h-3 w-3" />
-            <span>Hackathons &amp; Activities</span>
+            <span>Hackathons &amp; Leadership</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
             Experience &amp; Leadership
           </h2>
           <div className="h-1 w-16 bg-gradient-to-r from-[#9B5CFF] to-[#5B8CFF] mx-auto mt-3 rounded-full" />
           <p className="mt-4 text-sm sm:text-base text-slate-600 dark:text-slate-300">
-            Demonstrated teamwork under high-pressure hackathons, continuous academic enrichment via IIT Madras, and elected student leadership at Amrita Vishwa Vidyapeetham.
+            Collaborative full-stack hackathon development under tight time constraints, elected student batch leadership, and community service.
           </p>
         </div>
 
@@ -77,7 +75,7 @@ export const Experience: React.FC = () => {
                 <span>•</span>
                 <span className="flex items-center gap-1.5 font-mono text-purple-700 dark:text-[#9B5CFF] font-semibold">
                   <Calendar className="h-4 w-4" />
-                  <span>{HACKATHON_EXPERIENCE.formattedDate}</span>
+                  <span>{HACKATHON_EXPERIENCE.date}</span>
                 </span>
               </div>
 
@@ -136,139 +134,113 @@ export const Experience: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* 2. IIT MADRAS BS DEGREE & 3. COMMUNITY & LEADERSHIP */}
+        {/* 2. EXTRA CURRICULAR ACTIVITIES: LEADERSHIP (CLASS REP) & COMMUNITY SERVICE (NSS) */}
         <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-8">
           
-          {/* IIT Madras BS Degree - Continuous Learning Card */}
+          {/* Elected Class Representative Card */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="rounded-3xl border border-blue-200 dark:border-[#5B8CFF]/30 bg-white dark:bg-[#12121A]/80 p-6 sm:p-8 backdrop-blur-xl flex flex-col justify-between shadow-sm dark:shadow-none"
+            className="rounded-3xl border border-purple-200 dark:border-[#9B5CFF]/30 bg-white dark:bg-[#12121A]/80 p-6 sm:p-8 backdrop-blur-xl flex flex-col justify-between shadow-sm dark:shadow-none hover:shadow-md transition-shadow"
           >
             <div>
               <div className="flex items-center justify-between gap-2 mb-3">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 dark:bg-[#5B8CFF]/15 text-blue-700 dark:text-[#5B8CFF] border border-blue-200 dark:border-[#5B8CFF]/30">
-                  <GraduationCap className="h-3.5 w-3.5" />
-                  <span>Continuous Academic Training</span>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-purple-50 dark:bg-[#9B5CFF]/15 text-[#9B5CFF] border border-purple-200 dark:border-[#9B5CFF]/30">
+                  <ShieldCheck className="h-3.5 w-3.5" />
+                  <span>Elected Student Leadership</span>
                 </span>
-                <span className="text-[11px] font-mono text-emerald-600 dark:text-emerald-400 font-semibold">
-                  05/2024 – Present
+                <span className="text-[11px] font-mono text-purple-700 dark:text-[#9B5CFF] font-semibold">
+                  3rd Year
                 </span>
               </div>
 
               <h3 className="text-xl font-bold text-slate-900 dark:text-white">
-                {TRAINING_DATA.title} – {TRAINING_DATA.institution}
+                {EXTRACURRICULAR_DATA.leadership.title}
               </h3>
 
-              <div className="mt-2 flex flex-wrap items-center gap-3 text-xs text-slate-500 dark:text-slate-400">
-                <span className="flex items-center gap-1">
-                  <Clock className="h-3.5 w-3.5 text-[#5B8CFF]" />
-                  <span>{TRAINING_DATA.duration}</span>
-                </span>
-                <span>•</span>
-                <span>Mode: {TRAINING_DATA.mode}</span>
+              <div className="mt-2 flex items-center gap-2 text-xs text-slate-600 dark:text-slate-400 font-medium">
+                <Users2 className="h-4 w-4 text-[#5B8CFF]" />
+                <span>Coordinating communication between faculty and 60+ students</span>
               </div>
 
               <p className="mt-4 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                {TRAINING_DATA.description}
+                "{EXTRACURRICULAR_DATA.leadership.description}"
               </p>
 
-              {/* Note respecting guideline */}
-              <div className="mt-4 p-3 rounded-xl bg-amber-50 dark:bg-amber-500/10 border border-amber-200 dark:border-amber-500/20 text-xs text-amber-800 dark:text-amber-300">
-                <span className="font-semibold">Academic Note:</span> {TRAINING_DATA.note}
-              </div>
-
-              <div className="mt-5 space-y-2">
+              <div className="mt-5 space-y-2.5">
                 <span className="text-xs uppercase font-mono tracking-wider text-slate-500 dark:text-slate-400 block font-semibold">
-                  Key Curriculum Focus Areas:
+                  Key Responsibilities:
                 </span>
-                {TRAINING_DATA.focusAreas.map((area, idx) => (
+                {EXTRACURRICULAR_DATA.leadership.points.map((point, idx) => (
                   <div
                     key={idx}
-                    className="flex items-center gap-2 text-xs text-slate-700 dark:text-slate-300"
+                    className="flex items-start gap-2.5 rounded-xl border border-slate-200 dark:border-white/5 bg-slate-50 dark:bg-white/[0.02] p-3 text-xs text-slate-700 dark:text-slate-300"
                   >
-                    <div className="h-1.5 w-1.5 rounded-full bg-[#5B8CFF]" />
-                    <span>{area}</span>
+                    <CheckCircle2 className="h-4 w-4 text-[#9B5CFF] shrink-0 mt-0.5" />
+                    <span>{point}</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="mt-6 pt-4 border-t border-slate-200 dark:border-white/10 text-right">
-              <span className="text-[11px] font-mono text-slate-500 dark:text-slate-400">
-                Enrolled: BS in Data Science &amp; Applications
-              </span>
+            <div className="mt-6 pt-4 border-t border-slate-200 dark:border-white/10 flex items-center justify-between text-[11px] text-slate-500 dark:text-slate-400">
+              <span className="font-mono">Leadership &amp; Faculty Liaison</span>
+              <span className="text-purple-700 dark:text-[#9B5CFF] font-semibold">Active Term</span>
             </div>
           </motion.div>
 
-          {/* Community Involvement & Leadership (NSS & Class Rep) */}
+          {/* NSS Community Service Card */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.15 }}
-            className="rounded-3xl border border-emerald-200 dark:border-emerald-500/30 bg-white dark:bg-[#12121A]/80 p-6 sm:p-8 backdrop-blur-xl flex flex-col justify-between shadow-sm dark:shadow-none"
+            className="rounded-3xl border border-emerald-200 dark:border-emerald-500/30 bg-white dark:bg-[#12121A]/80 p-6 sm:p-8 backdrop-blur-xl flex flex-col justify-between shadow-sm dark:shadow-none hover:shadow-md transition-shadow"
           >
-            <div className="space-y-6">
-              {/* Class Representative Highlight */}
-              <div>
-                <div className="flex items-center justify-between gap-2 mb-2">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-purple-50 dark:bg-[#9B5CFF]/15 text-[#9B5CFF] border border-purple-200 dark:border-[#9B5CFF]/30">
-                    <ShieldCheck className="h-3.5 w-3.5" />
-                    <span>Elected Student Leadership</span>
-                  </span>
-                  <span className="text-[11px] font-mono text-purple-700 dark:text-[#9B5CFF] font-semibold">
-                    {EXTRACURRICULAR_DATA.leadership.duration}
-                  </span>
-                </div>
-
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white">
-                  {EXTRACURRICULAR_DATA.leadership.title} ({EXTRACURRICULAR_DATA.leadership.duration})
-                </h3>
-
-                <p className="mt-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                  {EXTRACURRICULAR_DATA.leadership.description}
-                </p>
-
-                <div className="mt-3 space-y-1.5">
-                  {EXTRACURRICULAR_DATA.leadership.points.map((pt, idx) => (
-                    <div
-                      key={idx}
-                      className="flex items-center gap-2 text-xs text-slate-700 dark:text-slate-300"
-                    >
-                      <div className="h-1.5 w-1.5 rounded-full bg-[#9B5CFF]" />
-                      <span>{pt}</span>
-                    </div>
-                  ))}
-                </div>
+            <div>
+              <div className="flex items-center justify-between gap-2 mb-3">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 dark:bg-emerald-500/15 text-emerald-800 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-500/30">
+                  <HeartHandshake className="h-3.5 w-3.5" />
+                  <span>Civic &amp; Community Service</span>
+                </span>
+                <span className="text-[11px] font-mono text-emerald-700 dark:text-emerald-400 font-semibold">
+                  {EXTRACURRICULAR_DATA.nss.duration}
+                </span>
               </div>
 
-              {/* NSS Community Service Highlight */}
-              <div className="pt-5 border-t border-slate-200 dark:border-white/10">
-                <div className="flex items-center justify-between gap-2 mb-2">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 dark:bg-emerald-500/15 text-emerald-800 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-500/30">
-                    <HeartHandshake className="h-3.5 w-3.5" />
-                    <span>Community Service</span>
-                  </span>
-                  <span className="text-[11px] font-mono text-emerald-700 dark:text-emerald-400 font-semibold">
-                    2 Years Service
-                  </span>
-                </div>
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white">
+                {EXTRACURRICULAR_DATA.nss.title}
+              </h3>
 
-                <h3 className="text-base font-bold text-slate-900 dark:text-white">
-                  {EXTRACURRICULAR_DATA.nss.title}
-                </h3>
+              <div className="mt-2 flex items-center gap-2 text-xs text-slate-600 dark:text-slate-400">
+                <Calendar className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
+                <span>{EXTRACURRICULAR_DATA.nss.duration}</span>
+              </div>
 
-                <p className="mt-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                  "{EXTRACURRICULAR_DATA.nss.description}"
-                </p>
+              <p className="mt-4 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                "{EXTRACURRICULAR_DATA.nss.description}"
+              </p>
+
+              <div className="mt-5 space-y-2.5">
+                <span className="text-xs uppercase font-mono tracking-wider text-slate-500 dark:text-slate-400 block font-semibold">
+                  Community Impact Pillars:
+                </span>
+                {EXTRACURRICULAR_DATA.nss.points.map((impact, idx) => (
+                  <div
+                    key={idx}
+                    className="flex items-start gap-2.5 rounded-xl border border-slate-200 dark:border-white/5 bg-slate-50 dark:bg-white/[0.02] p-3 text-xs text-slate-700 dark:text-slate-300"
+                  >
+                    <CheckCircle2 className="h-4 w-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
+                    <span>{impact}</span>
+                  </div>
+                ))}
               </div>
             </div>
 
             <div className="mt-6 pt-4 border-t border-slate-200 dark:border-white/10 flex items-center justify-between text-[11px] text-slate-500 dark:text-slate-400">
-              <span className="font-mono">Leadership &amp; Civic Engagement</span>
+              <span className="font-mono">Social Welfare &amp; Grassroots Action</span>
               <span className="text-emerald-600 dark:text-emerald-400 font-semibold">Active Contribution</span>
             </div>
           </motion.div>

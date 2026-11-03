@@ -29,7 +29,7 @@ export const Education: React.FC = () => {
           </h2>
           <div className="h-1 w-16 bg-gradient-to-r from-[#9B5CFF] to-[#5B8CFF] mx-auto mt-3 rounded-full" />
           <p className="mt-4 text-sm sm:text-base text-slate-600 dark:text-slate-300">
-            Rigorous undergraduate curriculum at Amrita Vishwa Vidyapeetham, establishing core competencies in computer science, software engineering, and modern application development.
+            Rigorous undergraduate training at Amrita Vishwa Vidyapeetham, Coimbatore, developing strong foundations in scalable systems, database architectures, and algorithms.
           </p>
         </div>
 
@@ -71,7 +71,7 @@ export const Education: React.FC = () => {
                 {/* Degree & Department Details */}
                 <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="p-4 rounded-2xl bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-white/5">
-                    <div className="text-xs text-slate-500 dark:text-slate-400">Degree &amp; Specialization</div>
+                    <div className="text-xs text-slate-500 dark:text-slate-400">Degree &amp; Program</div>
                     <div className="text-sm sm:text-base font-bold text-slate-900 dark:text-white mt-1">
                       {EDUCATION_DATA.degree}
                     </div>
@@ -111,7 +111,7 @@ export const Education: React.FC = () => {
                 <div className="mt-6 pt-5 border-t border-slate-200 dark:border-white/10 space-y-2">
                   <div className="flex items-center gap-2 text-xs font-semibold text-slate-800 dark:text-slate-300">
                     <BookOpen className="h-4 w-4 text-[#9B5CFF]" />
-                    <span>Academic Curriculum &amp; Foundations</span>
+                    <span>Academic Highlights &amp; Student Coordination</span>
                   </div>
                   {EDUCATION_DATA.highlights.map((item, idx) => (
                     <div

@@ -6,7 +6,7 @@ import {
   Mail,
   Sparkles,
   Terminal,
-  BrainCircuit,
+  ShieldCheck,
 } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './SocialIcons';
 import { PERSONAL_INFO } from '../data/portfolioData';
@@ -31,7 +31,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenPlaceholder }) => {
       className="relative min-h-[92vh] flex items-center justify-center pt-28 pb-16 overflow-hidden"
     >
       {/* Background Lighting Effects */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-[#9B5CFF]/15 dark:bg-[#9B5CFF]/15 blur-[120px] rounded-full pointer-events-none -z-10 animate-pulse-slow" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-[#9B5CFF]/15 blur-[120px] rounded-full pointer-events-none -z-10 animate-pulse-slow" />
       <div className="absolute top-1/3 left-1/4 w-[380px] h-[380px] bg-[#5B8CFF]/12 blur-[100px] rounded-full pointer-events-none -z-10" />
       <div className="absolute bottom-10 right-1/4 w-[320px] h-[320px] bg-[#22d3ee]/10 blur-[90px] rounded-full pointer-events-none -z-10" />
 
@@ -217,14 +217,14 @@ export const Hero: React.FC<HeroProps> = ({ onOpenPlaceholder }) => {
                       <span>Amrita Univ.</span>
                     </motion.div>
 
-                    {/* Badge 2: IIT Madras BS */}
+                    {/* Badge 2: Elected Class Rep */}
                     <motion.div
                       animate={{ y: [0, 5, 0] }}
                       transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
                       className="absolute -bottom-3 -left-3 rounded-xl border border-slate-300 dark:border-white/10 bg-white dark:bg-[#0B0B0F]/95 px-3 py-1.5 shadow-md flex items-center gap-1.5 text-[11px] font-semibold text-slate-800 dark:text-slate-200"
                     >
-                      <BrainCircuit className="h-3 w-3 text-[#5B8CFF]" />
-                      <span>IIT Madras BS</span>
+                      <ShieldCheck className="h-3 w-3 text-[#5B8CFF]" />
+                      <span>Class Rep (3rd Yr)</span>
                     </motion.div>
                   </div>
 
@@ -232,23 +232,23 @@ export const Hero: React.FC<HeroProps> = ({ onOpenPlaceholder }) => {
                     Harini A K
                   </h3>
                   <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">
-                    B.Tech CSE (2023 – 2027) | CGPA: 6.52 | Class Rep (3rd Year)
+                    B.Tech CSE (2023 – 2027) | CGPA: 6.51 | Coimbatore
                   </p>
                 </div>
 
                 {/* Quick Academic & Project Metrics */}
                 <div className="grid grid-cols-3 gap-2 pt-4 border-t border-slate-200 dark:border-white/10 text-center">
                   <div className="p-2.5 rounded-xl bg-slate-50 dark:bg-white/[0.03] border border-slate-200 dark:border-white/5">
-                    <span className="block text-base font-extrabold text-[#9B5CFF]">5+</span>
-                    <span className="text-[10px] text-slate-600 dark:text-slate-400">Featured Apps</span>
+                    <span className="block text-base font-extrabold text-[#9B5CFF]">4</span>
+                    <span className="text-[10px] text-slate-600 dark:text-slate-400">Key Projects</span>
                   </div>
                   <div className="p-2.5 rounded-xl bg-slate-50 dark:bg-white/[0.03] border border-slate-200 dark:border-white/5">
                     <span className="block text-base font-extrabold text-[#5B8CFF]">2</span>
                     <span className="text-[10px] text-slate-600 dark:text-slate-400">Live Vercel Apps</span>
                   </div>
                   <div className="p-2.5 rounded-xl bg-slate-50 dark:bg-white/[0.03] border border-slate-200 dark:border-white/5">
-                    <span className="block text-base font-extrabold text-emerald-600 dark:text-emerald-400">~96%</span>
-                    <span className="text-[10px] text-slate-600 dark:text-slate-400">AI Accuracy</span>
+                    <span className="block text-base font-extrabold text-emerald-600 dark:text-emerald-400">&gt;99%</span>
+                    <span className="text-[10px] text-slate-600 dark:text-slate-400">RL Wait Cut</span>
                   </div>
                 </div>
 
@@ -256,7 +256,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenPlaceholder }) => {
                 <div className="mt-4 flex items-center justify-between text-[11px] text-slate-600 dark:text-slate-400 pt-2 font-mono">
                   <span className="flex items-center gap-1.5">
                     <Terminal className="h-3 w-3 text-[#9B5CFF]" />
-                    <span>React • Next.js • FastAPI • Node</span>
+                    <span>Java • Python • React • FastAPI</span>
                   </span>
                   <span className="text-emerald-600 dark:text-emerald-400 font-semibold">● Open to Connect</span>
                 </div>

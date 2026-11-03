@@ -92,7 +92,7 @@ export const About: React.FC = () => {
                 <span className="block text-xs font-bold text-slate-900 dark:text-white">
                   Academics
                 </span>
-                <span className="text-[11px] text-slate-600 dark:text-slate-400">CGPA: 6.52 (B.Tech CSE)</span>
+                <span className="text-[11px] text-slate-600 dark:text-slate-400">CGPA: 6.51 (B.Tech CSE)</span>
               </div>
             </div>
           </motion.div>
@@ -116,15 +116,15 @@ export const About: React.FC = () => {
               <div className="mt-6 pt-5 border-t border-slate-200 dark:border-white/10 space-y-2.5">
                 <div className="flex items-center gap-2 text-xs text-slate-700 dark:text-slate-300">
                   <CheckCircle className="h-3.5 w-3.5 text-[#5B8CFF]" />
-                  <span>Full-Stack developer with deployed Vercel applications</span>
+                  <span>Full-Stack developer with deployed Vercel platforms</span>
                 </div>
                 <div className="flex items-center gap-2 text-xs text-slate-700 dark:text-slate-300">
                   <CheckCircle className="h-3.5 w-3.5 text-[#9B5CFF]" />
-                  <span>Enrolled in IIT Madras BS Degree in Data Science</span>
+                  <span>Scalable backend systems, PostgreSQL, Redis &amp; Celery</span>
                 </div>
                 <div className="flex items-center gap-2 text-xs text-slate-700 dark:text-slate-300">
                   <CheckCircle className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" />
-                  <span>Elected Class Representative (3rd Year CSE Batch)</span>
+                  <span>Elected Class Representative (Coordinating 60+ Students)</span>
                 </div>
               </div>
             </div>
