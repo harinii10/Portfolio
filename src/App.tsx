@@ -42,7 +42,7 @@ export function App() {
 
   return (
     <ThemeProvider>
-      <div className="relative min-h-screen bg-[#0B0B0F] text-slate-100 dark:bg-[#0B0B0F] dark:text-slate-100 light:bg-[#F8FAFC] light:text-slate-900 selection:bg-[#9B5CFF]/30 selection:text-white transition-colors duration-300">
+      <div className="relative min-h-screen bg-[#F8FAFC] text-slate-900 dark:bg-[#0B0B0F] dark:text-slate-100 selection:bg-[#9B5CFF]/30 selection:text-white transition-colors duration-300">
         
         {/* Navigation Bar */}
         <Navbar onOpenPlaceholder={handleOpenPlaceholder} />

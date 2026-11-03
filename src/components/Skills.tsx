@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
   Terminal,
-  Layers,
+  Globe,
+  Server,
+  Database,
   Wrench,
   Sparkles,
   Check,
@@ -10,16 +12,20 @@ import {
 import { SKILL_CATEGORIES } from '../data/portfolioData';
 
 export const Skills: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'all' | 'languages' | 'frameworks' | 'tools'>('all');
+  const [activeTab, setActiveTab] = useState<string>('all');
 
   const getCategoryIcon = (title: string) => {
     switch (title) {
       case 'Programming Languages':
         return <Terminal className="h-5 w-5 text-[#9B5CFF]" />;
-      case 'Frameworks and Libraries':
-        return <Layers className="h-5 w-5 text-[#5B8CFF]" />;
-      case 'Tools & Environments':
-        return <Wrench className="h-5 w-5 text-[#22d3ee]" />;
+      case 'Frontend Development':
+        return <Globe className="h-5 w-5 text-[#5B8CFF]" />;
+      case 'Backend & APIs':
+        return <Server className="h-5 w-5 text-[#22d3ee]" />;
+      case 'Databases':
+        return <Database className="h-5 w-5 text-emerald-500" />;
+      case 'Tools & Workflow':
+        return <Wrench className="h-5 w-5 text-amber-500" />;
       default:
         return <Sparkles className="h-5 w-5 text-[#9B5CFF]" />;
     }
@@ -27,8 +33,10 @@ export const Skills: React.FC = () => {
 
   const filteredCategories = SKILL_CATEGORIES.filter((cat) => {
     if (activeTab === 'languages') return cat.title === 'Programming Languages';
-    if (activeTab === 'frameworks') return cat.title === 'Frameworks and Libraries';
-    if (activeTab === 'tools') return cat.title === 'Tools & Environments';
+    if (activeTab === 'frontend') return cat.title === 'Frontend Development';
+    if (activeTab === 'backend') return cat.title === 'Backend & APIs';
+    if (activeTab === 'databases') return cat.title === 'Databases';
+    if (activeTab === 'tools') return cat.title === 'Tools & Workflow';
     return true;
   });
 
@@ -46,89 +54,69 @@ export const Skills: React.FC = () => {
             <Sparkles className="h-3 w-3" />
             <span>Technical Capabilities</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white dark:text-white light:text-slate-900">
+          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
             Technical Skills
           </h2>
           <div className="h-1 w-16 bg-gradient-to-r from-[#9B5CFF] to-[#5B8CFF] mx-auto mt-3 rounded-full" />
-          <p className="mt-4 text-sm sm:text-base text-slate-300 dark:text-slate-300 light:text-slate-600">
-            A comprehensive overview of programming languages, libraries, data science frameworks, and developer environments used across academic coursework and software implementations.
+          <p className="mt-4 text-sm sm:text-base text-slate-600 dark:text-slate-300">
+            Organized across languages, client frontend libraries, high-performance backend microservices, relational databases, and version control tools.
           </p>
         </div>
 
         {/* Category Filter Tabs */}
-        <div className="mt-10 flex justify-center">
-          <div className="inline-flex p-1.5 rounded-2xl bg-white/[0.04] border border-white/10 dark:bg-white/[0.04] light:bg-slate-100 light:border-slate-200">
-            <button
-              onClick={() => setActiveTab('all')}
-              className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
-                activeTab === 'all'
-                  ? 'bg-gradient-to-r from-[#9B5CFF] to-[#5B8CFF] text-white shadow-md shadow-[#9B5CFF]/25'
-                  : 'text-slate-400 hover:text-white dark:hover:text-white light:text-slate-600 light:hover:text-slate-900'
-              }`}
-            >
-              All Skills
-            </button>
-            <button
-              onClick={() => setActiveTab('languages')}
-              className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
-                activeTab === 'languages'
-                  ? 'bg-gradient-to-r from-[#9B5CFF] to-[#5B8CFF] text-white shadow-md shadow-[#9B5CFF]/25'
-                  : 'text-slate-400 hover:text-white dark:hover:text-white light:text-slate-600 light:hover:text-slate-900'
-              }`}
-            >
-              Languages
-            </button>
-            <button
-              onClick={() => setActiveTab('frameworks')}
-              className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
-                activeTab === 'frameworks'
-                  ? 'bg-gradient-to-r from-[#9B5CFF] to-[#5B8CFF] text-white shadow-md shadow-[#9B5CFF]/25'
-                  : 'text-slate-400 hover:text-white dark:hover:text-white light:text-slate-600 light:hover:text-slate-900'
-              }`}
-            >
-              Frameworks &amp; ML
-            </button>
-            <button
-              onClick={() => setActiveTab('tools')}
-              className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
-                activeTab === 'tools'
-                  ? 'bg-gradient-to-r from-[#9B5CFF] to-[#5B8CFF] text-white shadow-md shadow-[#9B5CFF]/25'
-                  : 'text-slate-400 hover:text-white dark:hover:text-white light:text-slate-600 light:hover:text-slate-900'
-              }`}
-            >
-              Tools &amp; IDEs
-            </button>
+        <div className="mt-10 flex justify-center overflow-x-auto pb-2">
+          <div className="inline-flex p-1.5 rounded-2xl bg-slate-200/60 dark:bg-white/[0.04] border border-slate-300 dark:border-white/10 backdrop-blur-md">
+            {[
+              { id: 'all', label: 'All Skills' },
+              { id: 'languages', label: 'Languages' },
+              { id: 'frontend', label: 'Frontend' },
+              { id: 'backend', label: 'Backend' },
+              { id: 'databases', label: 'Databases' },
+              { id: 'tools', label: 'Tools' },
+            ].map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`px-3.5 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all whitespace-nowrap ${
+                  activeTab === tab.id
+                    ? 'bg-gradient-to-r from-[#9B5CFF] to-[#5B8CFF] text-white shadow-md shadow-[#9B5CFF]/25'
+                    : 'text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white'
+                }`}
+              >
+                {tab.label}
+              </button>
+            ))}
           </div>
         </div>
 
         {/* Skill Category Cards */}
-        <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredCategories.map((category, catIdx) => (
             <motion.div
               key={category.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: catIdx * 0.1 }}
-              className="rounded-3xl border border-white/10 bg-[#12121A]/80 p-6 sm:p-7 backdrop-blur-xl flex flex-col justify-between dark:bg-[#12121A]/80 light:bg-white light:border-slate-200 light:shadow-sm"
+              transition={{ duration: 0.5, delay: catIdx * 0.08 }}
+              className="rounded-3xl border border-slate-200 dark:border-white/10 bg-white dark:bg-[#12121A]/80 p-6 backdrop-blur-xl flex flex-col justify-between shadow-sm dark:shadow-none hover:shadow-md transition-shadow"
             >
               <div>
                 {/* Header */}
-                <div className="flex items-center gap-3 pb-4 border-b border-white/10 dark:border-white/10 light:border-slate-200">
-                  <div className="p-2.5 rounded-xl bg-white/[0.04] border border-white/10">
+                <div className="flex items-center gap-3 pb-4 border-b border-slate-200 dark:border-white/10">
+                  <div className="p-2.5 rounded-xl bg-slate-100 dark:bg-white/[0.04] border border-slate-200 dark:border-white/10">
                     {getCategoryIcon(category.title)}
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-white dark:text-white light:text-slate-900">
+                    <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white">
                       {category.title}
                     </h3>
-                    <p className="text-[11px] text-slate-400 leading-tight">
+                    <p className="text-[11px] text-slate-500 dark:text-slate-400 leading-tight">
                       {category.skills.length} core proficiencies
                     </p>
                   </div>
                 </div>
 
-                <p className="mt-3 text-xs text-slate-400 dark:text-slate-400 light:text-slate-600">
+                <p className="mt-3 text-xs text-slate-600 dark:text-slate-400">
                   {category.description}
                 </p>
 
@@ -137,10 +125,10 @@ export const Skills: React.FC = () => {
                   {category.skills.map((skill) => (
                     <div
                       key={skill.name}
-                      className="group p-3 rounded-2xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.06] hover:border-[#9B5CFF]/30 transition-all dark:bg-white/[0.02] light:bg-slate-50 light:border-slate-200 light:hover:bg-purple-50/50"
+                      className="group p-3 rounded-2xl border border-slate-100 dark:border-white/5 bg-slate-50 dark:bg-white/[0.02] hover:bg-purple-50/50 dark:hover:bg-white/[0.06] hover:border-[#9B5CFF]/30 transition-all"
                     >
                       <div className="flex items-center justify-between">
-                        <span className="text-sm font-bold text-white dark:text-white light:text-slate-900 group-hover:text-[#9B5CFF] transition-colors">
+                        <span className="text-sm font-bold text-slate-900 dark:text-white group-hover:text-[#9B5CFF] transition-colors">
                           {skill.name}
                         </span>
                         {skill.highlight && (
@@ -149,7 +137,7 @@ export const Skills: React.FC = () => {
                           </span>
                         )}
                       </div>
-                      <p className="mt-1 text-xs text-slate-400 dark:text-slate-400 light:text-slate-600 leading-snug">
+                      <p className="mt-1 text-xs text-slate-600 dark:text-slate-400 leading-snug">
                         {skill.description}
                       </p>
                     </div>
@@ -158,9 +146,9 @@ export const Skills: React.FC = () => {
               </div>
 
               {/* Bottom tag note */}
-              <div className="mt-6 pt-4 border-t border-white/10 dark:border-white/10 light:border-slate-200 flex items-center justify-between text-[11px] text-slate-400">
-                <span className="font-mono">Real-world applied</span>
-                <span className="flex items-center gap-1 text-emerald-400">
+              <div className="mt-6 pt-4 border-t border-slate-200 dark:border-white/10 flex items-center justify-between text-[11px] text-slate-500 dark:text-slate-400">
+                <span className="font-mono">Applied in production</span>
+                <span className="flex items-center gap-1 text-emerald-600 dark:text-emerald-400 font-medium">
                   <Check className="h-3 w-3" /> Active stack
                 </span>
               </div>
@@ -169,28 +157,28 @@ export const Skills: React.FC = () => {
         </div>
 
         {/* Skills Banner / Quick Badges */}
-        <div className="mt-14 rounded-3xl border border-white/10 bg-gradient-to-r from-[#9B5CFF]/10 via-[#5B8CFF]/10 to-[#22d3ee]/10 p-6 sm:p-8 dark:border-white/10 light:border-slate-200 light:bg-slate-100">
+        <div className="mt-14 rounded-3xl border border-slate-200 dark:border-white/10 bg-slate-100/70 dark:bg-gradient-to-r dark:from-[#9B5CFF]/10 dark:via-[#5B8CFF]/10 dark:to-[#22d3ee]/10 p-6 sm:p-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
-              <h4 className="text-lg font-bold text-white dark:text-white light:text-slate-900">
-                Algorithmic &amp; Systems Engineering Focus
+              <h4 className="text-lg font-bold text-slate-900 dark:text-white">
+                Full-Stack &amp; AI Engineering Competency
               </h4>
-              <p className="text-xs sm:text-sm text-slate-300 dark:text-slate-300 light:text-slate-600 mt-1">
-                Combining core Java and Python OOP architectures with real-time reinforcement learning, data structures, and web technologies.
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1">
+                From responsive client interfaces with React/Next.js to asynchronous FastAPI and Celery backends with PostgreSQL.
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-2">
-              <span className="px-3 py-1 rounded-xl text-xs font-mono font-medium bg-black/40 text-slate-200 border border-white/10">
-                SUMO &amp; TraCI
+              <span className="px-3 py-1 rounded-xl text-xs font-mono font-medium bg-white dark:bg-black/40 text-slate-800 dark:text-slate-200 border border-slate-300 dark:border-white/10 shadow-sm">
+                Next.js &amp; React
               </span>
-              <span className="px-3 py-1 rounded-xl text-xs font-mono font-medium bg-black/40 text-slate-200 border border-white/10">
-                PPO &amp; ANN
+              <span className="px-3 py-1 rounded-xl text-xs font-mono font-medium bg-white dark:bg-black/40 text-slate-800 dark:text-slate-200 border border-slate-300 dark:border-white/10 shadow-sm">
+                FastAPI &amp; Express
               </span>
-              <span className="px-3 py-1 rounded-xl text-xs font-mono font-medium bg-black/40 text-slate-200 border border-white/10">
-                OOP &amp; Linked Lists
+              <span className="px-3 py-1 rounded-xl text-xs font-mono font-medium bg-white dark:bg-black/40 text-slate-800 dark:text-slate-200 border border-slate-300 dark:border-white/10 shadow-sm">
+                PostgreSQL &amp; Supabase
               </span>
-              <span className="px-3 py-1 rounded-xl text-xs font-mono font-medium bg-black/40 text-slate-200 border border-white/10">
-                React &amp; Node.js
+              <span className="px-3 py-1 rounded-xl text-xs font-mono font-medium bg-white dark:bg-black/40 text-slate-800 dark:text-slate-200 border border-slate-300 dark:border-white/10 shadow-sm">
+                Celery &amp; Redis
               </span>
             </div>
           </div>

@@ -4,6 +4,7 @@ import {
   Sparkles,
   ExternalLink,
   Maximize2,
+  Calendar,
 } from 'lucide-react';
 import { GithubIcon } from './SocialIcons';
 import { FEATURED_PROJECTS, type Project } from '../data/portfolioData';
@@ -17,133 +18,164 @@ export const Projects: React.FC<ProjectsProps> = ({
   onSelectProject,
   onOpenPlaceholder,
 }) => {
-  // SVG Graphic Illustrations for Projects
+  // SVG Graphic Illustrations for the 5 projects
   const renderProjectVisual = (projectId: string) => {
     switch (projectId) {
-      case 'adaptive-traffic-control':
+      case 'medical-hallucination-detection':
         return (
-          <div className="relative w-full h-48 rounded-2xl bg-gradient-to-br from-[#0e0e18] via-[#141424] to-[#1c1836] border border-white/10 p-4 flex flex-col justify-between overflow-hidden">
-            {/* Ambient glow */}
+          <div className="relative w-full h-48 rounded-2xl bg-gradient-to-br from-purple-50 via-indigo-50 to-rose-50 dark:from-[#0e0e18] dark:via-[#141424] dark:to-[#1c1836] border border-slate-200 dark:border-white/10 p-4 flex flex-col justify-between overflow-hidden">
             <div className="absolute top-0 right-0 w-44 h-44 bg-[#9B5CFF]/20 blur-3xl pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-44 h-44 bg-[#5B8CFF]/20 blur-3xl pointer-events-none" />
-
             <div className="flex items-center justify-between text-xs">
-              <span className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 font-mono font-semibold">
-                <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                SUMO &amp; TraCI Connected
+              <span className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-purple-100 text-purple-700 dark:bg-purple-500/15 dark:text-purple-300 border border-purple-300 dark:border-purple-500/30 font-mono font-semibold">
+                <span className="h-1.5 w-1.5 rounded-full bg-purple-500 animate-pulse" />
+                Medical LLM Evaluator
               </span>
-              <span className="font-mono text-slate-400 text-[11px]">
-                RL Agent: PPO
-              </span>
+              <span className="font-mono text-slate-500 dark:text-slate-400 text-[11px]">11/2025 – Present</span>
             </div>
-
-            {/* Visual simulation representation */}
             <div className="my-auto py-2">
-              <div className="flex items-center justify-between gap-3">
-                {/* Traffic Node Graphic */}
-                <div className="flex-1 p-2.5 rounded-xl bg-white/[0.03] border border-white/10 text-center">
-                  <div className="text-[10px] text-slate-400 uppercase font-mono">Fog Layer</div>
-                  <div className="text-xs font-bold text-white mt-0.5">ANN State Eval</div>
-                  <div className="h-1 bg-gradient-to-r from-[#9B5CFF] to-[#5B8CFF] rounded-full mt-1.5" />
+              <div className="flex items-center justify-between gap-2">
+                <div className="flex-1 p-2 rounded-xl bg-white dark:bg-white/[0.04] border border-slate-200 dark:border-white/10 text-center shadow-xs">
+                  <div className="text-[10px] text-slate-500 dark:text-slate-400 uppercase font-mono">Clinical Query</div>
+                  <div className="text-xs font-bold text-slate-800 dark:text-white mt-0.5">Prompt Pipeline</div>
                 </div>
-
-                <div className="text-[#9B5CFF] font-bold text-lg">⇄</div>
-
-                {/* Reduction Metric */}
-                <div className="flex-1 p-2.5 rounded-xl bg-[#9B5CFF]/10 border border-[#9B5CFF]/30 text-center">
-                  <div className="text-[10px] text-[#9B5CFF] font-mono uppercase font-semibold">
-                    Optimization
-                  </div>
-                  <div className="text-sm font-extrabold text-emerald-400 mt-0.5">
-                    &gt;99% Reduced
-                  </div>
-                  <div className="text-[9px] text-slate-400">Waiting Time Loss</div>
+                <div className="text-[#9B5CFF] font-bold text-base">➔</div>
+                <div className="flex-1 p-2 rounded-xl bg-purple-100/60 dark:bg-[#9B5CFF]/15 border border-purple-200 dark:border-[#9B5CFF]/30 text-center">
+                  <div className="text-[10px] text-purple-700 dark:text-purple-300 font-mono uppercase font-semibold">Fact Checking</div>
+                  <div className="text-xs font-extrabold text-purple-900 dark:text-emerald-400 mt-0.5">Reliability Score</div>
                 </div>
               </div>
             </div>
-
-            {/* Bottom telemetry line */}
-            <div className="flex items-center justify-between text-[11px] font-mono text-slate-400 pt-2 border-t border-white/5">
-              <span>Dynamic Signal Cycles</span>
-              <span className="text-[#5B8CFF]">Real-Time TraCI Telemetry</span>
+            <div className="flex items-center justify-between text-[11px] font-mono text-slate-500 dark:text-slate-400 pt-2 border-t border-slate-200 dark:border-white/5">
+              <span>Structured Verification</span>
+              <span className="text-[#9B5CFF]">Healthcare AI Research</span>
             </div>
           </div>
         );
 
-      case 'atm-transaction-system':
+      case 'project-tracker':
         return (
-          <div className="relative w-full h-48 rounded-2xl bg-gradient-to-br from-[#0e0e18] via-[#121626] to-[#122035] border border-white/10 p-4 flex flex-col justify-between overflow-hidden">
+          <div className="relative w-full h-48 rounded-2xl bg-gradient-to-br from-blue-50 via-sky-50 to-indigo-50 dark:from-[#0e0e18] dark:via-[#121626] dark:to-[#122035] border border-slate-200 dark:border-white/10 p-4 flex flex-col justify-between overflow-hidden">
             <div className="absolute top-0 right-0 w-44 h-44 bg-[#5B8CFF]/20 blur-3xl pointer-events-none" />
-
             <div className="flex items-center justify-between text-xs">
-              <span className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#5B8CFF]/15 text-[#5B8CFF] border border-[#5B8CFF]/30 font-mono font-semibold">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#5B8CFF]" />
-                Linked-List Node Engine
+              <span className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-500/15 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-500/30 font-mono font-semibold">
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-ping" />
+                Live on Vercel
               </span>
-              <span className="font-mono text-slate-400 text-[11px]">Python 3</span>
+              <span className="font-mono text-slate-500 dark:text-slate-400 text-[11px]">React + TS</span>
             </div>
-
-            {/* Linked-List visualization */}
-            <div className="my-auto py-2">
-              <div className="flex items-center justify-center gap-1.5 text-xs font-mono">
-                <div className="px-2.5 py-1.5 rounded-lg bg-white/[0.05] border border-white/10 text-center">
-                  <span className="block text-[9px] text-slate-400">Node 0</span>
-                  <span className="font-bold text-slate-200">Balance</span>
-                </div>
-                <span className="text-[#5B8CFF]">→</span>
-                <div className="px-2.5 py-1.5 rounded-lg bg-[#5B8CFF]/20 border border-[#5B8CFF]/40 text-center">
-                  <span className="block text-[9px] text-[#5B8CFF]">Node 1</span>
-                  <span className="font-bold text-white">Withdraw</span>
-                </div>
-                <span className="text-[#5B8CFF]">→</span>
-                <div className="px-2.5 py-1.5 rounded-lg bg-emerald-500/20 border border-emerald-500/40 text-center">
-                  <span className="block text-[9px] text-emerald-400">Node 2</span>
-                  <span className="font-bold text-white">Deposit</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex items-center justify-between text-[11px] font-mono text-slate-400 pt-2 border-t border-white/5">
-              <span>Dynamic Pointer Chaining</span>
-              <span className="text-emerald-400">Boundary Validated</span>
-            </div>
-          </div>
-        );
-
-      case 'banking-systems':
-        return (
-          <div className="relative w-full h-48 rounded-2xl bg-gradient-to-br from-[#0e0e18] via-[#1a1324] to-[#251533] border border-white/10 p-4 flex flex-col justify-between overflow-hidden">
-            <div className="absolute top-0 right-0 w-44 h-44 bg-[#9B5CFF]/20 blur-3xl pointer-events-none" />
-
-            <div className="flex items-center justify-between text-xs">
-              <span className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#9B5CFF]/15 text-[#9B5CFF] border border-[#9B5CFF]/30 font-mono font-semibold">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#9B5CFF]" />
-                Modular OOP Architecture
-              </span>
-              <span className="font-mono text-slate-400 text-[11px]">Java Core</span>
-            </div>
-
-            {/* Architecture Schema */}
             <div className="my-auto py-2">
               <div className="grid grid-cols-3 gap-2 text-center text-xs">
-                <div className="p-2 rounded-lg bg-white/[0.04] border border-white/10">
-                  <div className="text-[10px] text-slate-400 font-mono">Layer 1</div>
-                  <div className="font-bold text-white mt-0.5">Account OOP</div>
+                <div className="p-2 rounded-lg bg-white dark:bg-white/[0.04] border border-slate-200 dark:border-white/10 shadow-xs">
+                  <span className="block text-[9px] text-slate-500 dark:text-slate-400 font-mono">View 1</span>
+                  <span className="font-bold text-slate-800 dark:text-white">Kanban</span>
                 </div>
-                <div className="p-2 rounded-lg bg-[#9B5CFF]/15 border border-[#9B5CFF]/30">
-                  <div className="text-[10px] text-[#9B5CFF] font-mono">Layer 2</div>
-                  <div className="font-bold text-white mt-0.5">Tx Engine</div>
+                <div className="p-2 rounded-lg bg-blue-100/60 dark:bg-[#5B8CFF]/20 border border-blue-200 dark:border-[#5B8CFF]/30 shadow-xs">
+                  <span className="block text-[9px] text-blue-700 dark:text-[#5B8CFF] font-mono">View 2</span>
+                  <span className="font-bold text-blue-950 dark:text-white">List</span>
                 </div>
-                <div className="p-2 rounded-lg bg-white/[0.04] border border-white/10">
-                  <div className="text-[10px] text-slate-400 font-mono">Layer 3</div>
-                  <div className="font-bold text-white mt-0.5">Ledger DS</div>
+                <div className="p-2 rounded-lg bg-white dark:bg-white/[0.04] border border-slate-200 dark:border-white/10 shadow-xs">
+                  <span className="block text-[9px] text-slate-500 dark:text-slate-400 font-mono">View 3</span>
+                  <span className="font-bold text-slate-800 dark:text-white">Timeline</span>
                 </div>
               </div>
             </div>
+            <div className="flex items-center justify-between text-[11px] font-mono text-slate-500 dark:text-slate-400 pt-2 border-t border-slate-200 dark:border-white/5">
+              <span>Drag-and-Drop UX</span>
+              <span className="text-[#5B8CFF]">Optimized Rendering</span>
+            </div>
+          </div>
+        );
 
-            <div className="flex items-center justify-between text-[11px] font-mono text-slate-400 pt-2 border-t border-white/5">
-              <span>Algorithmic Runtime Efficiency</span>
-              <span className="text-[#9B5CFF]">Encapsulated Logic</span>
+      case 'golf-charity-subscription':
+        return (
+          <div className="relative w-full h-48 rounded-2xl bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 dark:from-[#0e0e18] dark:via-[#111f1e] dark:to-[#122822] border border-slate-200 dark:border-white/10 p-4 flex flex-col justify-between overflow-hidden">
+            <div className="absolute top-0 right-0 w-44 h-44 bg-emerald-500/15 blur-3xl pointer-events-none" />
+            <div className="flex items-center justify-between text-xs">
+              <span className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-500/15 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-500/30 font-mono font-semibold">
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-ping" />
+                Live on Vercel
+              </span>
+              <span className="font-mono text-slate-500 dark:text-slate-400 text-[11px]">Next.js + Supabase</span>
+            </div>
+            <div className="my-auto py-2">
+              <div className="flex items-center justify-around gap-2 text-center text-xs">
+                <div className="p-2 rounded-lg bg-white dark:bg-white/[0.04] border border-slate-200 dark:border-white/10 shadow-xs">
+                  <div className="text-[9px] text-slate-500 dark:text-slate-400 font-mono">Scores</div>
+                  <div className="font-bold text-slate-800 dark:text-white">Handicap</div>
+                </div>
+                <div className="text-emerald-600 font-bold text-base">⇄</div>
+                <div className="p-2 rounded-lg bg-emerald-100/70 dark:bg-emerald-500/20 border border-emerald-300 dark:border-emerald-500/30 shadow-xs">
+                  <div className="text-[9px] text-emerald-800 dark:text-emerald-300 font-mono">Monthly Draw</div>
+                  <div className="font-bold text-emerald-950 dark:text-white">Charity Pool</div>
+                </div>
+              </div>
+            </div>
+            <div className="flex items-center justify-between text-[11px] font-mono text-slate-500 dark:text-slate-400 pt-2 border-t border-slate-200 dark:border-white/5">
+              <span>Admin Panel &amp; Auth</span>
+              <span className="text-emerald-600 dark:text-emerald-400">PostgreSQL RLS</span>
+            </div>
+          </div>
+        );
+
+      case 'ai-attendance-facial-recognition':
+        return (
+          <div className="relative w-full h-48 rounded-2xl bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 dark:from-[#0e0e18] dark:via-[#19152b] dark:to-[#221733] border border-slate-200 dark:border-white/10 p-4 flex flex-col justify-between overflow-hidden">
+            <div className="absolute top-0 right-0 w-44 h-44 bg-[#9B5CFF]/20 blur-3xl pointer-events-none" />
+            <div className="flex items-center justify-between text-xs">
+              <span className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-purple-100 text-purple-800 dark:bg-[#9B5CFF]/15 dark:text-[#9B5CFF] border border-purple-300 dark:border-[#9B5CFF]/30 font-mono font-semibold">
+                Computer Vision
+              </span>
+              <span className="font-mono text-slate-500 dark:text-slate-400 text-[11px]">React + Python</span>
+            </div>
+            <div className="my-auto py-2">
+              <div className="flex items-center justify-center gap-3 text-xs font-mono">
+                <div className="px-3 py-1.5 rounded-lg bg-white dark:bg-white/[0.04] border border-slate-200 dark:border-white/10 shadow-xs">
+                  <span className="block text-[9px] text-slate-500 dark:text-slate-400">Camera Feed</span>
+                  <span className="font-bold text-slate-800 dark:text-white">Face Detected</span>
+                </div>
+                <span className="text-[#9B5CFF]">➔</span>
+                <div className="px-3 py-1.5 rounded-lg bg-purple-100/70 dark:bg-[#9B5CFF]/20 border border-purple-300 dark:border-[#9B5CFF]/40 shadow-xs">
+                  <span className="block text-[9px] text-purple-800 dark:text-[#9B5CFF]">REST API</span>
+                  <span className="font-bold text-purple-950 dark:text-white">Logged</span>
+                </div>
+              </div>
+            </div>
+            <div className="flex items-center justify-between text-[11px] font-mono text-slate-500 dark:text-slate-400 pt-2 border-t border-slate-200 dark:border-white/5">
+              <span>Automated Roll-Call</span>
+              <span className="text-[#9B5CFF]">Dashboard Visuals</span>
+            </div>
+          </div>
+        );
+
+      case 'crop-disease-diagnosis':
+        return (
+          <div className="relative w-full h-48 rounded-2xl bg-gradient-to-br from-amber-50 via-emerald-50 to-cyan-50 dark:from-[#0e0e18] dark:via-[#141d1a] dark:to-[#17261d] border border-slate-200 dark:border-white/10 p-4 flex flex-col justify-between overflow-hidden">
+            <div className="absolute top-0 right-0 w-44 h-44 bg-emerald-500/20 blur-3xl pointer-events-none" />
+            <div className="flex items-center justify-between text-xs">
+              <span className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-500/15 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-500/30 font-mono font-semibold">
+                ~96% Accuracy
+              </span>
+              <span className="font-mono text-slate-500 dark:text-slate-400 text-[11px]">FastAPI + Celery</span>
+            </div>
+            <div className="my-auto py-2">
+              <div className="grid grid-cols-3 gap-2 text-center text-xs">
+                <div className="p-1.5 rounded-lg bg-white dark:bg-white/[0.04] border border-slate-200 dark:border-white/10 shadow-xs">
+                  <div className="text-[9px] text-slate-500 dark:text-slate-400 font-mono">FastAPI</div>
+                  <div className="font-bold text-slate-800 dark:text-white">REST</div>
+                </div>
+                <div className="p-1.5 rounded-lg bg-amber-100/70 dark:bg-amber-500/15 border border-amber-300 dark:border-amber-500/30 shadow-xs">
+                  <div className="text-[9px] text-amber-800 dark:text-amber-400 font-mono">Queue</div>
+                  <div className="font-bold text-amber-950 dark:text-white">Celery/Redis</div>
+                </div>
+                <div className="p-1.5 rounded-lg bg-white dark:bg-white/[0.04] border border-slate-200 dark:border-white/10 shadow-xs">
+                  <div className="text-[9px] text-slate-500 dark:text-slate-400 font-mono">DB</div>
+                  <div className="font-bold text-slate-800 dark:text-white">PostgreSQL</div>
+                </div>
+              </div>
+            </div>
+            <div className="flex items-center justify-between text-[11px] font-mono text-slate-500 dark:text-slate-400 pt-2 border-t border-slate-200 dark:border-white/5">
+              <span>Async Processing</span>
+              <span className="text-emerald-600 dark:text-emerald-400">Severity Metric</span>
             </div>
           </div>
         );
@@ -164,27 +196,27 @@ export const Projects: React.FC<ProjectsProps> = ({
         <div className="text-center max-w-3xl mx-auto">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#9B5CFF]/15 text-[#9B5CFF] border border-[#9B5CFF]/20 mb-3">
             <Sparkles className="h-3 w-3" />
-            <span>Featured Engineering Work</span>
+            <span>Featured Software &amp; AI Systems</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white dark:text-white light:text-slate-900">
+          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
             Featured Projects
           </h2>
           <div className="h-1 w-16 bg-gradient-to-r from-[#9B5CFF] to-[#5B8CFF] mx-auto mt-3 rounded-full" />
-          <p className="mt-4 text-sm sm:text-base text-slate-300 dark:text-slate-300 light:text-slate-600">
-            Practical applications spanning Reinforcement Learning, distributed simulation with SUMO/TraCI, dynamic data structure engineering, and modular Java OOP systems.
+          <p className="mt-4 text-sm sm:text-base text-slate-600 dark:text-slate-300">
+            Production full-stack web platforms live on Vercel, advanced medical AI hallucination evaluations, facial recognition attendance, and scalable distributed asynchronous API architectures.
           </p>
         </div>
 
         {/* Projects Grid */}
-        <div className="mt-14 grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {FEATURED_PROJECTS.map((project, idx) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.55, delay: idx * 0.15 }}
-              className="group relative rounded-3xl border border-white/10 bg-[#12121A]/85 p-6 backdrop-blur-xl flex flex-col justify-between hover:border-[#9B5CFF]/50 transition-all duration-300 hover:-translate-y-1.5 dark:bg-[#12121A]/85 light:bg-white light:border-slate-200 light:shadow-md"
+              transition={{ duration: 0.55, delay: idx * 0.1 }}
+              className="group relative rounded-3xl border border-slate-200 dark:border-white/10 bg-white dark:bg-[#12121A]/85 p-6 backdrop-blur-xl flex flex-col justify-between shadow-sm hover:shadow-xl dark:shadow-none hover:border-[#9B5CFF]/50 transition-all duration-300 hover:-translate-y-1.5"
             >
               <div>
                 {/* Visual Graphic Thumbnail */}
@@ -194,21 +226,28 @@ export const Projects: React.FC<ProjectsProps> = ({
 
                 {/* Project Header */}
                 <div className="flex items-center justify-between gap-2 mb-2">
-                  <span className="text-[11px] font-mono font-semibold px-2.5 py-0.5 rounded-full bg-[#9B5CFF]/15 text-[#9B5CFF] border border-[#9B5CFF]/20">
+                  <span className="text-[11px] font-mono font-semibold px-2.5 py-0.5 rounded-full bg-purple-50 dark:bg-[#9B5CFF]/15 text-[#9B5CFF] border border-purple-200 dark:border-[#9B5CFF]/20">
                     {project.type}
                   </span>
                   {project.highlightMetric && (
-                    <span className="text-[11px] font-semibold text-emerald-400">
+                    <span className="text-[11px] font-semibold text-emerald-600 dark:text-emerald-400">
                       {project.highlightMetric}
                     </span>
                   )}
                 </div>
 
-                <h3 className="text-lg sm:text-xl font-bold text-white dark:text-white light:text-slate-900 group-hover:text-[#9B5CFF] transition-colors leading-snug">
+                <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white group-hover:text-[#9B5CFF] transition-colors leading-snug">
                   {project.title}
                 </h3>
 
-                <p className="mt-2.5 text-xs sm:text-sm text-slate-300 dark:text-slate-300 light:text-slate-600 leading-relaxed">
+                {project.date && (
+                  <div className="mt-1 flex items-center gap-1 text-[11px] font-mono text-slate-500 dark:text-slate-400">
+                    <Calendar className="h-3 w-3 text-[#5B8CFF]" />
+                    <span>{project.date}</span>
+                  </div>
+                )}
+
+                <p className="mt-2.5 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   {project.description}
                 </p>
 
@@ -217,7 +256,7 @@ export const Projects: React.FC<ProjectsProps> = ({
                   {project.keyContributions.slice(0, 2).map((contrib, cIdx) => (
                     <div
                       key={cIdx}
-                      className="flex items-start gap-2 text-xs text-slate-400 dark:text-slate-400 light:text-slate-600"
+                      className="flex items-start gap-2 text-xs text-slate-600 dark:text-slate-400"
                     >
                       <div className="h-1.5 w-1.5 rounded-full bg-[#5B8CFF] mt-1 shrink-0" />
                       <span className="line-clamp-2">{contrib}</span>
@@ -230,7 +269,7 @@ export const Projects: React.FC<ProjectsProps> = ({
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-2 py-0.5 rounded-md text-[11px] font-medium bg-white/[0.04] text-slate-300 border border-white/5 dark:bg-white/[0.04] dark:text-slate-300 light:bg-slate-100 light:text-slate-700 light:border-slate-200"
+                      className="px-2 py-0.5 rounded-md text-[11px] font-medium bg-slate-100 dark:bg-white/[0.04] text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5"
                     >
                       {tag}
                     </span>
@@ -239,31 +278,43 @@ export const Projects: React.FC<ProjectsProps> = ({
               </div>
 
               {/* Action Buttons */}
-              <div className="mt-6 pt-4 border-t border-white/10 dark:border-white/10 light:border-slate-200 space-y-2">
+              <div className="mt-6 pt-4 border-t border-slate-200 dark:border-white/10 space-y-2">
                 <button
                   onClick={() => onSelectProject(project)}
                   className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs sm:text-sm font-semibold bg-gradient-to-r from-[#9B5CFF] to-[#5B8CFF] text-white shadow-md shadow-[#9B5CFF]/20 hover:opacity-95 transition-all"
                 >
                   <Maximize2 className="h-4 w-4" />
-                  <span>View Project Details</span>
+                  <span>View Full Details</span>
                 </button>
 
                 <div className="grid grid-cols-2 gap-2">
                   <button
                     onClick={() => onOpenPlaceholder('repo', project.title)}
-                    className="flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg border border-white/10 hover:bg-white/5 text-xs text-slate-300 hover:text-white transition-colors dark:text-slate-300 light:text-slate-700 light:border-slate-300"
+                    className="flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg border border-slate-200 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-white/5 text-xs text-slate-700 dark:text-slate-300 transition-colors"
                   >
                     <GithubIcon className="h-3.5 w-3.5" />
                     <span>Source Code</span>
                   </button>
 
-                  <button
-                    onClick={() => onOpenPlaceholder('demo', project.title)}
-                    className="flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg border border-white/10 hover:bg-white/5 text-xs text-slate-300 hover:text-white transition-colors dark:text-slate-300 light:text-slate-700 light:border-slate-300"
-                  >
-                    <ExternalLink className="h-3.5 w-3.5" />
-                    <span>Live Demo</span>
-                  </button>
+                  {project.liveUrl ? (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg border border-emerald-300 dark:border-emerald-500/40 bg-emerald-50 dark:bg-emerald-500/10 hover:bg-emerald-100 dark:hover:bg-emerald-500/20 text-xs font-semibold text-emerald-800 dark:text-emerald-400 transition-colors"
+                    >
+                      <ExternalLink className="h-3.5 w-3.5" />
+                      <span>Live Demo</span>
+                    </a>
+                  ) : (
+                    <button
+                      onClick={() => onOpenPlaceholder('demo', project.title)}
+                      className="flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg border border-slate-200 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-white/5 text-xs text-slate-700 dark:text-slate-300 transition-colors"
+                    >
+                      <ExternalLink className="h-3.5 w-3.5" />
+                      <span>Demo Overview</span>
+                    </button>
+                  )}
                 </div>
               </div>
             </motion.div>
@@ -272,13 +323,13 @@ export const Projects: React.FC<ProjectsProps> = ({
 
         {/* Project Inquiry Prompt */}
         <div className="mt-12 text-center">
-          <p className="text-xs sm:text-sm text-slate-400 dark:text-slate-400 light:text-slate-600">
-            Interested in code walkthroughs or simulator demonstrations?{' '}
+          <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
+            Have questions about system architectures or live deployments?{' '}
             <a
               href="#contact"
               className="text-[#9B5CFF] hover:underline font-semibold"
             >
-              Let's schedule a discussion &rarr;
+              Let's schedule a conversation &rarr;
             </a>
           </p>
         </div>

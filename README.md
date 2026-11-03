@@ -2,25 +2,31 @@
 
 A modern, high-performance personal portfolio built for **Harini A K**, Computer Science Engineering undergraduate at Amrita Vishwa Vidyapeetham, Coimbatore. 
 
-Showcasing technical proficiency across Java, Python, Reinforcement Learning (SUMO & TraCI), Data Structures, and modern Web Development.
+Showcasing live production web applications, full-stack development (React, Next.js, FastAPI, Node.js), machine learning research, and student leadership.
 
 ---
 
 ## 🌟 Highlights & Key Features
 
-- **Dark & Light Mode Support**: Precision-engineered dark theme with `#0B0B0F` background, `#12121A` secondary cards, electric purple (`#9B5CFF`), and blue (`#5B8CFF`) lighting accents.
-- **Hero Section**: Dynamic rotating specialty roles, high-visibility call-to-actions, verified contact pills, and profile monogram card.
-- **Academic & Project Showcase**:
-  - **Adaptive Traffic Signal Control Using Fog Computing & RL**: Highlights >99% waiting time reduction, SUMO simulator, and TraCI Python integration.
-  - **ATM Transaction System**: Linked-list based balance, withdrawal, and deposit system in Python.
-  - **Banking Systems**: Enterprise-grade modular Java OOP architecture with algorithmic runtime efficiency.
-- **Interactive Project Deep-Dive Modal**: Detailed architecture, system features, and engineering contribution breakdowns.
-- **ByteVerse 7.0 Hackathon Card**: Trophy-accented showcase highlighting mental wellness conversational AI, mood tracking, and interactive mini-games developed under time constraints at NIT Patna.
-- **IIT Madras BS Degree Continuous Learning**: Highlighted as an ongoing undergraduate program in Data Science & Applications.
-- **NSS Community Involvement**: 2-year active civic engagement.
-- **Functional Resume Download**: Built-in PDF resume asset (`/Harini_A_K_Resume.pdf`) generated from exact academic credentials.
-- **Interactive Contact Form & Feedback**: Client-side validation with mailto generator and instant copy feedback.
-- **Vercel Deployment Ready**: Preconfigured `vercel.json` with cache headers and SPA rewrites.
+- **Flawless Light & Dark Mode**: System-aware theme toggle with persistent storage. Dark mode features a `#0B0B0F` canvas with electric purple (`#9B5CFF`) and blue (`#5B8CFF`) lighting effects; light mode features a clean, high-contrast slate aesthetic.
+- **Hero Section**: Dynamic rotating roles (*Computer Science Engineer*, *Full-Stack Web Developer*, *AI & Machine Learning Enthusiast*), direct action buttons, and verified contact pills.
+- **Projects Showcase (Latest Resume)**:
+  1. **Medical Hallucination Detection and Classification using Machine Learning (11/2025 – Present)**: Structured evaluation methods, literature review, and prompt engineering to improve clinical LLM reliability.
+  2. **Project Tracker, Full Stack Web Application**: Multi-view project management tool with Kanban, List, and Timeline views, custom drag-and-drop, React & TypeScript.  
+     👉 **Live on Vercel**: [https://project-tracker-owa1.vercel.app/](https://project-tracker-owa1.vercel.app/)
+  3. **Golf Charity Subscription Platform**: Full-stack Next.js and Supabase web application with golf score management, monthly charity draw system, secure authentication, route protection, and admin panel.  
+     👉 **Live on Vercel**: [https://golf-charity-platform-1gmj.vercel.app/](https://golf-charity-platform-1gmj.vercel.app/)
+  4. **AI-Based Attendance System Using Facial Recognition**: Full-stack React frontend and Python computer vision backend automating student tracking.
+  5. **AI-Enabled Crop Disease Diagnosis & Severity Detection System**: High-performance FastAPI REST APIs for AI model inference (~96% accuracy), PostgreSQL, and asynchronous Celery/Redis processing.
+- **Interactive Project Deep-Dive Modal**: Full architecture overviews, key contributions, and instant links to live Vercel deployments.
+- **ByteVerse 7.0 Hackathon Card**: Trophy-accented showcase highlighting mental wellness conversational AI, mood tracking, and interactive games built at NIT Patna.
+- **Education & Student Leadership**:
+  - **Amrita Vishwa Vidyapeetham** (B.Tech CSE, 2023–2027, CGPA: **6.52**)
+  - **Class Representative (3rd Year)**: Elected student liaison coordinating academic schedules and faculty communications.
+- **IIT Madras BS Degree Programme**: Ongoing continuous undergraduate education in Data Science & Applications.
+- **NSS Community Involvement**: 2 years of active social welfare and civic service.
+- **PDF Resume Download**: Automatically generated 2-page PDF asset at [`/Harini_A_K_Resume.pdf`](file:///d:/Portfolio/public/Harini_A_K_Resume.pdf).
+- **Interactive Contact Form**: Direct client-side validation with pre-formatted email client launcher and copy feedback.
 
 ---
 
@@ -47,41 +53,19 @@ npm install
 ```bash
 npm run dev
 ```
-Open your browser at the local URL (typically `http://localhost:5173`).
 
 ### 3. Production Build
 ```bash
 npm run build
 ```
-The optimized production bundle will be generated in `dist/`.
-
-### 4. Preview Production Build
-```bash
-npm run preview
-```
 
 ---
 
-## 🌐 Deployment to Vercel
-
-### Method 1: Vercel CLI
-```bash
-npx vercel
-```
-
-### Method 2: GitHub / Git Integration
-1. Push this repository to GitHub or GitLab.
-2. Import the repository in [Vercel](https://vercel.com).
-3. The framework preset `Vite` and output directory `dist` are automatically configured via `vercel.json`.
-4. Click **Deploy**.
-
----
-
-## 📄 Verified Personal & Contact Information
+## 📄 Verified Personal Credentials
 
 - **Name**: HARINI A K
-- **Role**: Computer Science Engineer | Software Developer | AI & Technology Enthusiast
-- **Institution**: Amrita Vishwa Vidyapeetham, Coimbatore (B.Tech CSE 2023–2027, CGPA: 6.52)
-- **Email**: [hariniakk006@gmail.com](mailto:hariniakk006@gmail.com)
+- **Email**: [hariniak006@gmail.com](mailto:hariniak006@gmail.com)
 - **Phone**: +91 7902010306
-- **Resume**: Available in `public/Harini_A_K_Resume.pdf`
+- **Institution**: Amrita Vishwa Vidyapeetham, Coimbatore (B.Tech CSE 2023–2027, CGPA: 6.52)
+- **Leadership**: Class Representative (3rd Year)
+- **Resume**: Available at `public/Harini_A_K_Resume.pdf`

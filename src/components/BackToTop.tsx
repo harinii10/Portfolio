@@ -31,7 +31,7 @@ export const BackToTop: React.FC = () => {
           exit={{ opacity: 0, scale: 0.8, y: 10 }}
           onClick={scrollToTop}
           aria-label="Back to top"
-          className="fixed bottom-6 right-6 z-30 flex h-12 w-12 items-center justify-center rounded-2xl border border-white/15 bg-[#12121A]/90 text-white shadow-xl backdrop-blur-md transition-all hover:border-[#9B5CFF]/60 hover:scale-105 active:scale-95 dark:bg-[#12121A]/90 dark:text-white light:bg-white light:text-slate-800 light:border-slate-300 light:shadow-lg"
+          className="fixed bottom-6 right-6 z-30 flex h-12 w-12 items-center justify-center rounded-2xl border border-slate-300 dark:border-white/15 bg-white dark:bg-[#12121A]/90 text-slate-800 dark:text-white shadow-lg dark:shadow-xl backdrop-blur-md transition-all hover:border-[#9B5CFF]/60 hover:scale-105 active:scale-95"
         >
           {/* Circular progress SVG */}
           <svg className="absolute inset-0 h-full w-full -rotate-90 p-1">
@@ -39,7 +39,7 @@ export const BackToTop: React.FC = () => {
               cx="20"
               cy="20"
               r="17"
-              className="text-white/10 stroke-current"
+              className="text-slate-200 dark:text-white/10 stroke-current"
               strokeWidth="2.5"
               fill="transparent"
             />
@@ -55,7 +55,7 @@ export const BackToTop: React.FC = () => {
               fill="transparent"
             />
           </svg>
-          <ArrowUp className="h-5 w-5 text-slate-200 dark:text-slate-200 light:text-slate-800" />
+          <ArrowUp className="h-5 w-5 text-slate-700 dark:text-slate-200" />
         </motion.button>
       )}
     </AnimatePresence>

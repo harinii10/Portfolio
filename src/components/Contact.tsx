@@ -55,7 +55,6 @@ export const Contact: React.FC<ContactProps> = ({ onOpenPlaceholder }) => {
     e.preventDefault();
     if (!validate()) return;
 
-    // Trigger celebratory particle effect
     confetti({
       particleCount: 50,
       spread: 60,
@@ -63,7 +62,6 @@ export const Contact: React.FC<ContactProps> = ({ onOpenPlaceholder }) => {
       colors: ['#9B5CFF', '#5B8CFF', '#22d3ee'],
     });
 
-    // Prepare mailto link
     const mailtoUrl = `mailto:${PERSONAL_INFO.email}?subject=${encodeURIComponent(
       `[Portfolio Inquiry] ${formData.subject}`
     )}&body=${encodeURIComponent(
@@ -99,12 +97,12 @@ export const Contact: React.FC<ContactProps> = ({ onOpenPlaceholder }) => {
             <Sparkles className="h-3 w-3" />
             <span>Get In Touch</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white dark:text-white light:text-slate-900">
+          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
             Have an Idea? Let's Connect.
           </h2>
           <div className="h-1 w-16 bg-gradient-to-r from-[#9B5CFF] to-[#5B8CFF] mx-auto mt-3 rounded-full" />
-          <p className="mt-4 text-sm sm:text-base text-slate-300 dark:text-slate-300 light:text-slate-600">
-            Open to software engineering internships, collaborative academic projects, full-stack development, and tech opportunities.
+          <p className="mt-4 text-sm sm:text-base text-slate-600 dark:text-slate-300">
+            Open to software engineering placements, full-stack opportunities, internship applications, and collaborative tech projects.
           </p>
         </div>
 
@@ -120,19 +118,19 @@ export const Contact: React.FC<ContactProps> = ({ onOpenPlaceholder }) => {
             className="lg:col-span-5 space-y-4"
           >
             {/* Direct Email Card */}
-            <div className="rounded-3xl border border-white/10 bg-[#12121A]/85 p-6 backdrop-blur-xl shadow-xl dark:bg-[#12121A]/85 light:bg-white light:border-slate-200">
+            <div className="rounded-3xl border border-slate-200 dark:border-white/10 bg-white dark:bg-[#12121A]/85 p-6 backdrop-blur-xl shadow-lg dark:shadow-xl">
               <div className="flex items-center justify-between mb-3">
                 <span className="text-xs uppercase font-mono font-semibold text-[#9B5CFF]">
                   Direct Email
                 </span>
                 <button
                   onClick={handleCopyEmail}
-                  className="flex items-center gap-1 text-xs text-slate-400 hover:text-white transition-colors"
+                  className="flex items-center gap-1 text-xs text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors"
                 >
                   {isCopiedEmail ? (
                     <>
-                      <Check className="h-3.5 w-3.5 text-emerald-400" />
-                      <span className="text-emerald-400">Copied</span>
+                      <Check className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" />
+                      <span className="text-emerald-600 dark:text-emerald-400 font-semibold">Copied</span>
                     </>
                   ) : (
                     <>
@@ -144,17 +142,17 @@ export const Contact: React.FC<ContactProps> = ({ onOpenPlaceholder }) => {
               </div>
 
               <div className="flex items-center gap-3">
-                <div className="p-3 rounded-2xl bg-[#9B5CFF]/15 text-[#9B5CFF]">
+                <div className="p-3 rounded-2xl bg-purple-100 dark:bg-[#9B5CFF]/15 text-[#9B5CFF]">
                   <Mail className="h-5 w-5" />
                 </div>
                 <div>
                   <a
                     href={`mailto:${PERSONAL_INFO.email}`}
-                    className="text-base font-bold text-white dark:text-white light:text-slate-900 hover:text-[#9B5CFF] transition-colors break-all"
+                    className="text-base font-bold text-slate-900 dark:text-white hover:text-[#9B5CFF] transition-colors break-all"
                   >
                     {PERSONAL_INFO.email}
                   </a>
-                  <p className="text-xs text-slate-400 mt-0.5">
+                  <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
                     Fast response within 24 hours
                   </p>
                 </div>
@@ -162,19 +160,19 @@ export const Contact: React.FC<ContactProps> = ({ onOpenPlaceholder }) => {
             </div>
 
             {/* Direct Phone Card */}
-            <div className="rounded-3xl border border-white/10 bg-[#12121A]/85 p-6 backdrop-blur-xl shadow-xl dark:bg-[#12121A]/85 light:bg-white light:border-slate-200">
+            <div className="rounded-3xl border border-slate-200 dark:border-white/10 bg-white dark:bg-[#12121A]/85 p-6 backdrop-blur-xl shadow-lg dark:shadow-xl">
               <div className="flex items-center justify-between mb-3">
                 <span className="text-xs uppercase font-mono font-semibold text-[#5B8CFF]">
                   Phone Contact
                 </span>
                 <button
                   onClick={handleCopyPhone}
-                  className="flex items-center gap-1 text-xs text-slate-400 hover:text-white transition-colors"
+                  className="flex items-center gap-1 text-xs text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors"
                 >
                   {isCopiedPhone ? (
                     <>
-                      <Check className="h-3.5 w-3.5 text-emerald-400" />
-                      <span className="text-emerald-400">Copied</span>
+                      <Check className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" />
+                      <span className="text-emerald-600 dark:text-emerald-400 font-semibold">Copied</span>
                     </>
                   ) : (
                     <>
@@ -186,17 +184,17 @@ export const Contact: React.FC<ContactProps> = ({ onOpenPlaceholder }) => {
               </div>
 
               <div className="flex items-center gap-3">
-                <div className="p-3 rounded-2xl bg-[#5B8CFF]/15 text-[#5B8CFF]">
+                <div className="p-3 rounded-2xl bg-blue-100 dark:bg-[#5B8CFF]/15 text-[#5B8CFF]">
                   <Phone className="h-5 w-5" />
                 </div>
                 <div>
                   <a
                     href={`tel:${PERSONAL_INFO.phone}`}
-                    className="text-base font-bold text-white dark:text-white light:text-slate-900 hover:text-[#5B8CFF] transition-colors font-mono"
+                    className="text-base font-bold text-slate-900 dark:text-white hover:text-[#5B8CFF] transition-colors font-mono"
                   >
                     {PERSONAL_INFO.phone}
                   </a>
-                  <p className="text-xs text-slate-400 mt-0.5">
+                  <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
                     Direct mobile / WhatsApp available
                   </p>
                 </div>
@@ -204,15 +202,15 @@ export const Contact: React.FC<ContactProps> = ({ onOpenPlaceholder }) => {
             </div>
 
             {/* Profile Links Box */}
-            <div className="rounded-3xl border border-white/10 bg-[#12121A]/85 p-6 backdrop-blur-xl shadow-xl dark:bg-[#12121A]/85 light:bg-white light:border-slate-200">
-              <span className="text-xs uppercase font-mono font-semibold text-slate-400 block mb-4">
+            <div className="rounded-3xl border border-slate-200 dark:border-white/10 bg-white dark:bg-[#12121A]/85 p-6 backdrop-blur-xl shadow-lg dark:shadow-xl">
+              <span className="text-xs uppercase font-mono font-semibold text-slate-500 dark:text-slate-400 block mb-4">
                 Professional Online Profiles
               </span>
 
               <div className="grid grid-cols-2 gap-3">
                 <button
                   onClick={() => onOpenPlaceholder('linkedin')}
-                  className="flex items-center justify-between p-3 rounded-2xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.06] hover:border-[#5B8CFF]/40 text-slate-200 dark:text-slate-200 light:text-slate-800 transition-all text-xs font-semibold"
+                  className="flex items-center justify-between p-3 rounded-2xl border border-slate-200 dark:border-white/5 bg-slate-50 dark:bg-white/[0.02] hover:bg-slate-100 dark:hover:bg-white/[0.06] hover:border-[#5B8CFF]/40 text-slate-800 dark:text-slate-200 transition-all text-xs font-semibold"
                 >
                   <div className="flex items-center gap-2">
                     <LinkedinIcon className="h-4 w-4 text-[#5B8CFF]" />
@@ -223,7 +221,7 @@ export const Contact: React.FC<ContactProps> = ({ onOpenPlaceholder }) => {
 
                 <button
                   onClick={() => onOpenPlaceholder('github')}
-                  className="flex items-center justify-between p-3 rounded-2xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.06] hover:border-[#9B5CFF]/40 text-slate-200 dark:text-slate-200 light:text-slate-800 transition-all text-xs font-semibold"
+                  className="flex items-center justify-between p-3 rounded-2xl border border-slate-200 dark:border-white/5 bg-slate-50 dark:bg-white/[0.02] hover:bg-slate-100 dark:hover:bg-white/[0.06] hover:border-[#9B5CFF]/40 text-slate-800 dark:text-slate-200 transition-all text-xs font-semibold"
                 >
                   <div className="flex items-center gap-2">
                     <GithubIcon className="h-4 w-4 text-[#9B5CFF]" />
@@ -233,8 +231,8 @@ export const Contact: React.FC<ContactProps> = ({ onOpenPlaceholder }) => {
                 </button>
               </div>
 
-              <div className="mt-4 pt-4 border-t border-white/10 flex items-center justify-between">
-                <span className="text-xs text-slate-400">Curriculum Vitae</span>
+              <div className="mt-4 pt-4 border-t border-slate-200 dark:border-white/10 flex items-center justify-between">
+                <span className="text-xs text-slate-500 dark:text-slate-400">Curriculum Vitae</span>
                 <a
                   href={PERSONAL_INFO.resumePath}
                   download="Harini_A_K_Resume.pdf"
@@ -255,11 +253,11 @@ export const Contact: React.FC<ContactProps> = ({ onOpenPlaceholder }) => {
             transition={{ duration: 0.55 }}
             className="lg:col-span-7"
           >
-            <div className="rounded-3xl border border-white/10 bg-[#12121A]/85 p-6 sm:p-8 backdrop-blur-xl shadow-xl dark:bg-[#12121A]/85 light:bg-white light:border-slate-200">
-              <h3 className="text-xl font-bold text-white dark:text-white light:text-slate-900 mb-2">
+            <div className="rounded-3xl border border-slate-200 dark:border-white/10 bg-white dark:bg-[#12121A]/85 p-6 sm:p-8 backdrop-blur-xl shadow-lg dark:shadow-xl">
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
                 Send a Direct Message
               </h3>
-              <p className="text-xs sm:text-sm text-slate-400 mb-6">
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mb-6">
                 Fill in your project or opportunity details below. Upon submission, this generates a pre-formatted email draft addressed to Harini.
               </p>
 
@@ -267,7 +265,7 @@ export const Contact: React.FC<ContactProps> = ({ onOpenPlaceholder }) => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {/* Name */}
                   <div>
-                    <label className="block text-xs font-semibold text-slate-300 dark:text-slate-300 light:text-slate-700 mb-1.5">
+                    <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
                       Your Name <span className="text-[#9B5CFF]">*</span>
                     </label>
                     <input
@@ -275,14 +273,14 @@ export const Contact: React.FC<ContactProps> = ({ onOpenPlaceholder }) => {
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder="e.g. John Doe / Tech Recruiter"
-                      className={`w-full px-4 py-3 rounded-xl border bg-white/[0.03] text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-[#9B5CFF] transition-all dark:bg-white/[0.03] dark:text-white light:bg-slate-50 light:text-slate-900 light:placeholder-slate-400 ${
+                      className={`w-full px-4 py-3 rounded-xl border bg-slate-50 dark:bg-white/[0.03] text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-[#9B5CFF] transition-all ${
                         errors.name
                           ? 'border-rose-500/70'
-                          : 'border-white/10 light:border-slate-300'
+                          : 'border-slate-300 dark:border-white/10'
                       }`}
                     />
                     {errors.name && (
-                      <p className="mt-1 text-xs text-rose-400 flex items-center gap-1">
+                      <p className="mt-1 text-xs text-rose-500 dark:text-rose-400 flex items-center gap-1">
                         <AlertCircle className="h-3 w-3" /> {errors.name}
                       </p>
                     )}
@@ -290,7 +288,7 @@ export const Contact: React.FC<ContactProps> = ({ onOpenPlaceholder }) => {
 
                   {/* Email */}
                   <div>
-                    <label className="block text-xs font-semibold text-slate-300 dark:text-slate-300 light:text-slate-700 mb-1.5">
+                    <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
                       Your Email Address <span className="text-[#9B5CFF]">*</span>
                     </label>
                     <input
@@ -298,14 +296,14 @@ export const Contact: React.FC<ContactProps> = ({ onOpenPlaceholder }) => {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="e.g. recruiter@company.com"
-                      className={`w-full px-4 py-3 rounded-xl border bg-white/[0.03] text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-[#9B5CFF] transition-all dark:bg-white/[0.03] dark:text-white light:bg-slate-50 light:text-slate-900 light:placeholder-slate-400 ${
+                      className={`w-full px-4 py-3 rounded-xl border bg-slate-50 dark:bg-white/[0.03] text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-[#9B5CFF] transition-all ${
                         errors.email
                           ? 'border-rose-500/70'
-                          : 'border-white/10 light:border-slate-300'
+                          : 'border-slate-300 dark:border-white/10'
                       }`}
                     />
                     {errors.email && (
-                      <p className="mt-1 text-xs text-rose-400 flex items-center gap-1">
+                      <p className="mt-1 text-xs text-rose-500 dark:text-rose-400 flex items-center gap-1">
                         <AlertCircle className="h-3 w-3" /> {errors.email}
                       </p>
                     )}
@@ -314,22 +312,22 @@ export const Contact: React.FC<ContactProps> = ({ onOpenPlaceholder }) => {
 
                 {/* Subject */}
                 <div>
-                  <label className="block text-xs font-semibold text-slate-300 dark:text-slate-300 light:text-slate-700 mb-1.5">
+                  <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
                     Subject / Topic <span className="text-[#9B5CFF]">*</span>
                   </label>
                   <input
                     type="text"
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                    placeholder="e.g. Software Engineering Internship Inquiry"
-                    className={`w-full px-4 py-3 rounded-xl border bg-white/[0.03] text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-[#9B5CFF] transition-all dark:bg-white/[0.03] dark:text-white light:bg-slate-50 light:text-slate-900 light:placeholder-slate-400 ${
+                    placeholder="e.g. Software Engineering Opportunity"
+                    className={`w-full px-4 py-3 rounded-xl border bg-slate-50 dark:bg-white/[0.03] text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-[#9B5CFF] transition-all ${
                       errors.subject
                         ? 'border-rose-500/70'
-                        : 'border-white/10 light:border-slate-300'
+                        : 'border-slate-300 dark:border-white/10'
                     }`}
                   />
                   {errors.subject && (
-                    <p className="mt-1 text-xs text-rose-400 flex items-center gap-1">
+                    <p className="mt-1 text-xs text-rose-500 dark:text-rose-400 flex items-center gap-1">
                       <AlertCircle className="h-3 w-3" /> {errors.subject}
                     </p>
                   )}
@@ -337,7 +335,7 @@ export const Contact: React.FC<ContactProps> = ({ onOpenPlaceholder }) => {
 
                 {/* Message */}
                 <div>
-                  <label className="block text-xs font-semibold text-slate-300 dark:text-slate-300 light:text-slate-700 mb-1.5">
+                  <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
                     Your Message <span className="text-[#9B5CFF]">*</span>
                   </label>
                   <textarea
@@ -345,14 +343,14 @@ export const Contact: React.FC<ContactProps> = ({ onOpenPlaceholder }) => {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Describe your project, team opportunity, or interview schedule..."
-                    className={`w-full px-4 py-3 rounded-xl border bg-white/[0.03] text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-[#9B5CFF] transition-all resize-none dark:bg-white/[0.03] dark:text-white light:bg-slate-50 light:text-slate-900 light:placeholder-slate-400 ${
+                    className={`w-full px-4 py-3 rounded-xl border bg-slate-50 dark:bg-white/[0.03] text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-[#9B5CFF] transition-all resize-none ${
                       errors.message
                         ? 'border-rose-500/70'
-                        : 'border-white/10 light:border-slate-300'
+                        : 'border-slate-300 dark:border-white/10'
                     }`}
                   />
                   {errors.message && (
-                    <p className="mt-1 text-xs text-rose-400 flex items-center gap-1">
+                    <p className="mt-1 text-xs text-rose-500 dark:text-rose-400 flex items-center gap-1">
                       <AlertCircle className="h-3 w-3" /> {errors.message}
                     </p>
                   )}
@@ -373,15 +371,15 @@ export const Contact: React.FC<ContactProps> = ({ onOpenPlaceholder }) => {
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="mt-4 p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-xs sm:text-sm text-emerald-300"
+                  className="mt-4 p-4 rounded-2xl bg-emerald-100 dark:bg-emerald-500/10 border border-emerald-300 dark:border-emerald-500/30 text-xs sm:text-sm text-emerald-900 dark:text-emerald-300"
                 >
                   <div className="flex items-center gap-2 font-bold mb-1">
-                    <Check className="h-4 w-4 text-emerald-400" />
+                    <Check className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
                     <span>Email client launched!</span>
                   </div>
-                  <p className="text-xs text-slate-300">
+                  <p className="text-xs text-slate-700 dark:text-slate-300">
                     If your email client did not automatically open, you can send your message directly to{' '}
-                    <span className="font-mono text-white underline">{PERSONAL_INFO.email}</span>.
+                    <span className="font-mono text-purple-700 dark:text-white font-bold underline">{PERSONAL_INFO.email}</span>.
                   </p>
                 </motion.div>
               )}

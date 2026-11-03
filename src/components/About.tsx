@@ -38,9 +38,9 @@ export const About: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#9B5CFF]/15 text-[#9B5CFF] border border-[#9B5CFF]/20 mb-3">
             <Sparkles className="h-3 w-3" />
-            <span>Background &amp; Ambitions</span>
+            <span>Background &amp; Profile</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white dark:text-white light:text-slate-900">
+          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
             About Me
           </h2>
           <div className="h-1 w-16 bg-gradient-to-r from-[#9B5CFF] to-[#5B8CFF] mx-auto mt-3 rounded-full" />
@@ -57,8 +57,8 @@ export const About: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="lg:col-span-7 space-y-4"
           >
-            <div className="glass-panel rounded-3xl p-6 sm:p-8 space-y-4 text-slate-300 dark:text-slate-300 light:text-slate-600 leading-relaxed text-base sm:text-lg">
-              <p className="font-medium text-white dark:text-white light:text-slate-900">
+            <div className="glass-panel rounded-3xl p-6 sm:p-8 space-y-4 text-slate-700 dark:text-slate-300 leading-relaxed text-base sm:text-lg">
+              <p className="font-semibold text-slate-900 dark:text-white">
                 {PERSONAL_INFO.aboutContent[0]}
               </p>
               <p>
@@ -71,28 +71,28 @@ export const About: React.FC = () => {
 
             {/* Quick Facts Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
-              <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-4 text-center dark:bg-white/[0.02] light:bg-slate-50 light:border-slate-200">
+              <div className="rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/[0.02] p-4 text-center shadow-sm dark:shadow-none">
                 <MapPin className="h-4 w-4 text-[#9B5CFF] mx-auto mb-1.5" />
-                <span className="block text-xs font-bold text-white dark:text-white light:text-slate-900">
+                <span className="block text-xs font-bold text-slate-900 dark:text-white">
                   Location
                 </span>
-                <span className="text-[11px] text-slate-400">Coimbatore, India</span>
+                <span className="text-[11px] text-slate-600 dark:text-slate-400">Coimbatore, India</span>
               </div>
 
-              <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-4 text-center dark:bg-white/[0.02] light:bg-slate-50 light:border-slate-200">
+              <div className="rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/[0.02] p-4 text-center shadow-sm dark:shadow-none">
                 <Calendar className="h-4 w-4 text-[#5B8CFF] mx-auto mb-1.5" />
-                <span className="block text-xs font-bold text-white dark:text-white light:text-slate-900">
+                <span className="block text-xs font-bold text-slate-900 dark:text-white">
                   Graduation
                 </span>
-                <span className="text-[11px] text-slate-400">Class of 2027</span>
+                <span className="text-[11px] text-slate-600 dark:text-slate-400">Class of 2027</span>
               </div>
 
-              <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-4 text-center dark:bg-white/[0.02] light:bg-slate-50 light:border-slate-200">
-                <Award className="h-4 w-4 text-emerald-400 mx-auto mb-1.5" />
-                <span className="block text-xs font-bold text-white dark:text-white light:text-slate-900">
+              <div className="rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/[0.02] p-4 text-center shadow-sm dark:shadow-none">
+                <Award className="h-4 w-4 text-emerald-600 dark:text-emerald-400 mx-auto mb-1.5" />
+                <span className="block text-xs font-bold text-slate-900 dark:text-white">
                   Academics
                 </span>
-                <span className="text-[11px] text-slate-400">CGPA: 6.52 (B.Tech CSE)</span>
+                <span className="text-[11px] text-slate-600 dark:text-slate-400">CGPA: 6.52 (B.Tech CSE)</span>
               </div>
             </div>
           </motion.div>
@@ -105,26 +105,26 @@ export const About: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="lg:col-span-5 space-y-4"
           >
-            <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-[#12121A] to-[#161622] p-6 sm:p-7 shadow-xl dark:from-[#12121A] dark:to-[#161622] light:from-white light:to-slate-50 light:border-slate-200">
+            <div className="rounded-3xl border border-slate-200 dark:border-white/10 bg-white dark:bg-gradient-to-br dark:from-[#12121A] dark:to-[#161622] p-6 sm:p-7 shadow-lg dark:shadow-xl">
               <span className="text-xs uppercase tracking-wider font-mono font-semibold text-[#9B5CFF] block mb-2">
                 Career Objective
               </span>
-              <blockquote className="text-base sm:text-lg italic font-medium text-slate-200 dark:text-slate-200 light:text-slate-800 leading-relaxed border-l-2 border-[#9B5CFF] pl-4">
+              <blockquote className="text-base sm:text-lg italic font-medium text-slate-800 dark:text-slate-200 leading-relaxed border-l-2 border-[#9B5CFF] pl-4">
                 "{PERSONAL_INFO.professionalIntro}"
               </blockquote>
 
-              <div className="mt-6 pt-5 border-t border-white/10 dark:border-white/10 light:border-slate-200 space-y-2.5">
-                <div className="flex items-center gap-2 text-xs text-slate-300 dark:text-slate-300 light:text-slate-600">
+              <div className="mt-6 pt-5 border-t border-slate-200 dark:border-white/10 space-y-2.5">
+                <div className="flex items-center gap-2 text-xs text-slate-700 dark:text-slate-300">
                   <CheckCircle className="h-3.5 w-3.5 text-[#5B8CFF]" />
-                  <span>Curious problem solver with algorithmic mindset</span>
+                  <span>Full-Stack developer with deployed Vercel applications</span>
                 </div>
-                <div className="flex items-center gap-2 text-xs text-slate-300 dark:text-slate-300 light:text-slate-600">
+                <div className="flex items-center gap-2 text-xs text-slate-700 dark:text-slate-300">
                   <CheckCircle className="h-3.5 w-3.5 text-[#9B5CFF]" />
                   <span>Enrolled in IIT Madras BS Degree in Data Science</span>
                 </div>
-                <div className="flex items-center gap-2 text-xs text-slate-300 dark:text-slate-300 light:text-slate-600">
-                  <CheckCircle className="h-3.5 w-3.5 text-emerald-400" />
-                  <span>Proven team collaborator in national level hackathons</span>
+                <div className="flex items-center gap-2 text-xs text-slate-700 dark:text-slate-300">
+                  <CheckCircle className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" />
+                  <span>Elected Class Representative (3rd Year CSE Batch)</span>
                 </div>
               </div>
             </div>
@@ -133,7 +133,7 @@ export const About: React.FC = () => {
 
         {/* Three Highlight Cards (Computer Science Engineering, Software Development, AI & Data Science) */}
         <div className="mt-12">
-          <h3 className="text-xl font-bold text-white dark:text-white light:text-slate-900 text-center mb-8">
+          <h3 className="text-xl font-bold text-slate-900 dark:text-white text-center mb-8">
             Core Pillars of Expertise
           </h3>
 
@@ -145,33 +145,30 @@ export const About: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.15 }}
-                className="group relative rounded-3xl border border-white/10 bg-[#12121A]/70 p-6 sm:p-7 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-[#9B5CFF]/40 dark:bg-[#12121A]/70 light:bg-white light:border-slate-200 light:shadow-sm"
+                className="group relative rounded-3xl border border-slate-200 dark:border-white/10 bg-white dark:bg-[#12121A]/70 p-6 sm:p-7 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-[#9B5CFF]/40 shadow-sm dark:shadow-none hover:shadow-md"
               >
-                {/* Accent glow on hover */}
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-b from-white/[0.04] to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
-
                 <div className="flex items-center justify-between mb-4">
-                  <div className="p-3 rounded-2xl bg-white/[0.04] border border-white/10 group-hover:scale-110 transition-transform">
+                  <div className="p-3 rounded-2xl bg-slate-100 dark:bg-white/[0.04] border border-slate-200 dark:border-white/10 group-hover:scale-110 transition-transform">
                     {getIcon(item.icon)}
                   </div>
-                  <span className="text-[11px] font-mono font-semibold px-2.5 py-1 rounded-full bg-white/[0.04] border border-white/10 text-slate-300 dark:text-slate-300 light:text-slate-600">
+                  <span className="text-[11px] font-mono font-semibold px-2.5 py-1 rounded-full bg-slate-100 dark:bg-white/[0.04] border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300">
                     {item.badge}
                   </span>
                 </div>
 
-                <h4 className="text-lg font-bold text-white dark:text-white light:text-slate-900 group-hover:text-[#9B5CFF] transition-colors">
+                <h4 className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-[#9B5CFF] transition-colors">
                   {item.title}
                 </h4>
 
-                <p className="mt-2.5 text-xs sm:text-sm text-slate-300 dark:text-slate-300 light:text-slate-600 leading-relaxed">
+                <p className="mt-2.5 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   {item.description}
                 </p>
 
-                <div className="mt-5 pt-4 border-t border-white/10 dark:border-white/10 light:border-slate-200 space-y-1.5">
+                <div className="mt-5 pt-4 border-t border-slate-200 dark:border-white/10 space-y-1.5">
                   {item.points.map((pt, pIdx) => (
                     <div
                       key={pIdx}
-                      className="flex items-center gap-2 text-xs text-slate-400 dark:text-slate-400 light:text-slate-600"
+                      className="flex items-center gap-2 text-xs text-slate-600 dark:text-slate-400"
                     >
                       <div className="h-1 w-1 rounded-full bg-[#5B8CFF]" />
                       <span>{pt}</span>
