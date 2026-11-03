@@ -138,14 +138,16 @@ export const Hero: React.FC<HeroProps> = ({ onOpenPlaceholder }) => {
                 Connect &amp; Profiles:
               </span>
 
-              <button
-                onClick={() => onOpenPlaceholder('github')}
+              <a
+                href={PERSONAL_INFO.socials.github}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white dark:bg-white/[0.04] border border-slate-300 dark:border-white/10 text-xs text-slate-700 dark:text-slate-300 hover:text-purple-600 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-white/10 shadow-sm dark:shadow-none transition-colors"
-                title="View GitHub (Placeholder Notice)"
+                title="View Harini's GitHub Profile"
               >
                 <GithubIcon className="h-3.5 w-3.5 text-[#9B5CFF]" />
                 <span>GitHub</span>
-              </button>
+              </a>
 
               <button
                 onClick={() => onOpenPlaceholder('linkedin')}

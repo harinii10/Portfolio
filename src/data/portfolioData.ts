@@ -57,7 +57,9 @@ export const PERSONAL_INFO = {
   ],
   socials: {
     linkedinPlaceholder: "https://www.linkedin.com/in/#harini-a-k",
-    githubPlaceholder: "https://github.com/#harini-a-k",
+    github: "https://github.com/harinii10",
+    githubPlaceholder: "https://github.com/harinii10",
+    portfolioRepo: "https://github.com/harinii10/Portfolio",
   },
   resumePath: "/Harini_A_K_Resume.pdf",
 };

@@ -97,13 +97,15 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPlaceholder }) => {
               </a>
 
               <div className="flex items-center gap-2 pt-2">
-                <button
-                  onClick={() => onOpenPlaceholder('github')}
+                <a
+                  href={PERSONAL_INFO.socials.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="p-2 rounded-lg bg-white dark:bg-white/5 border border-slate-200 dark:border-transparent hover:bg-slate-200 dark:hover:bg-white/10 text-slate-700 dark:text-slate-300 transition-colors shadow-xs"
-                  aria-label="GitHub profile placeholder"
+                  aria-label="Harini's GitHub profile"
                 >
                   <GithubIcon className="h-4 w-4" />
-                </button>
+                </a>
                 <button
                   onClick={() => onOpenPlaceholder('linkedin')}
                   className="p-2 rounded-lg bg-white dark:bg-white/5 border border-slate-200 dark:border-transparent hover:bg-slate-200 dark:hover:bg-white/10 text-slate-700 dark:text-slate-300 transition-colors shadow-xs"

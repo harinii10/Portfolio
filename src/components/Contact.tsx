@@ -219,8 +219,10 @@ export const Contact: React.FC<ContactProps> = ({ onOpenPlaceholder }) => {
                   <ExternalLink className="h-3.5 w-3.5 text-slate-400" />
                 </button>
 
-                <button
-                  onClick={() => onOpenPlaceholder('github')}
+                <a
+                  href={PERSONAL_INFO.socials.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center justify-between p-3 rounded-2xl border border-slate-200 dark:border-white/5 bg-slate-50 dark:bg-white/[0.02] hover:bg-slate-100 dark:hover:bg-white/[0.06] hover:border-[#9B5CFF]/40 text-slate-800 dark:text-slate-200 transition-all text-xs font-semibold"
                 >
                   <div className="flex items-center gap-2">
@@ -228,7 +230,7 @@ export const Contact: React.FC<ContactProps> = ({ onOpenPlaceholder }) => {
                     <span>GitHub</span>
                   </div>
                   <ExternalLink className="h-3.5 w-3.5 text-slate-400" />
-                </button>
+                </a>
               </div>
 
               <div className="mt-4 pt-4 border-t border-slate-200 dark:border-white/10 flex items-center justify-between">
