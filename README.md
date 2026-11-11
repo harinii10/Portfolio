@@ -1,4 +1,4 @@
-# HARINI A K – Premium Personal Portfolio Website
+# HARINI A K – Personal Portfolio Website
 
 A modern, high-performance personal portfolio built for **Harini A K**, Final-year Computer Science Engineering student at Amrita Vishwa Vidyapeetham, Coimbatore.
 
